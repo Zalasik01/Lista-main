@@ -35,16 +35,25 @@ input {
     border-radius: 5px;
 }
 button {
-    padding: 10px 20px;
+    padding: 7px 7px;
     border: none;
     border-radius: 5px;
-    background-color: $blue;
     color: $white;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 600;
 }
-button:hover {
-    background-color: #005499;
+button.add {
+    background-color: $blue;
+}
+button.add:hover {
+    background-color: darken($blue, 10%);
+}
+button.excluir {
+    background-color: $red;
+}
+button.excluir:hover {
+    background-color: darken($red, 10%);
 }
 ul {
     list-style: none;

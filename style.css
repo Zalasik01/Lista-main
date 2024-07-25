@@ -31,17 +31,29 @@ input {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 7px 7px;
   border: none;
   border-radius: 5px;
-  background-color: #0066b2;
   color: white;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-button:hover {
-  background-color: #005499;
+button.add {
+  background-color: #0066b2;
+}
+
+button.add:hover {
+  background-color: #00497f;
+}
+
+button.excluir {
+  background-color: #d43030;
+}
+
+button.excluir:hover {
+  background-color: #ad2424;
 }
 
 ul {
