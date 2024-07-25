@@ -16,7 +16,7 @@ function adicionarTarefa() {
     if (tarefaTexto.trim() !== "") {
         const novaTarefa = document.createElement("li");
         novaTarefa.innerHTML = `
-        ${tarefaTexto} <button class="excluir"> Excluir</button>
+        <p class="task"><img class="check" src="_assets/confirm.svg" alt=""> ${tarefaTexto} <img class="excluir check" src="_assets/cancel.svg" alt=""></p>
         `;
         listaTarefas.appendChild(novaTarefa);
         tarefaInput.value = "";
@@ -25,6 +25,6 @@ function adicionarTarefa() {
 
 listaTarefas.addEventListener("click", function (e) {
     if (e.target.classList.contains("excluir")) {
-        e.target.parentElement.remove();
+        e.target.closest("li").remove();
     }
 });

@@ -1,10 +1,11 @@
 @import "_variaveis/cores";
 
-// @media (max-width: 767.98px) {
-//     .destaque {
-//         height: 200px !important;
-//     }
-// }
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
 
 body {
     display: flex;
@@ -15,6 +16,7 @@ body {
     background-color: $white;
     font-family: 'Roboto', sans-serif;
 }
+
 .lista-tarefas {
     background-color: $white;
     padding: 20px;
@@ -22,11 +24,15 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 300px;
+    top: 20px;
+    position: fixed;
 }
+
 h1 {
     color: #333;
     margin-bottom: 20px;
 }
+
 input {
     width: calc(100% - 22px);
     padding: 10px;
@@ -34,6 +40,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 button {
     padding: 7px 7px;
     border: none;
@@ -43,24 +50,54 @@ button {
     font-size: 14px;
     font-weight: 600;
 }
+
 button.add {
     background-color: $blue;
 }
+
 button.add:hover {
     background-color: darken($blue, 10%);
 }
+
 button.excluir {
     background-color: $red;
 }
+
 button.excluir:hover {
     background-color: darken($red, 10%);
 }
+
 ul {
+    display: block;
     list-style: none;
     padding: 0;
     margin-top: 20px;
 }
+
 li {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px;
     border-bottom: 1px solid #ddd;
+}
+
+.texto-tarefa {
+    flex: 1;
+}
+
+.check {
+    padding: 5px;
+    height: 32px;
+    cursor: pointer;
+    text-align: center;
+    &:hover {
+        opacity: 80%;
+    }
+}
+
+p.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
